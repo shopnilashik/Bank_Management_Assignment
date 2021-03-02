@@ -59,9 +59,10 @@ namespace MidTermLabAssignment1
             {
                 if (yesBank[i] == null)
                 {
-                    yesBank[i] = account;
-                    break;
+
+                    continue;
                 }
+                yesBank[i].PrintAccount();
             }
         }
 

@@ -125,14 +125,14 @@ namespace MidTermLabAssignment1
                     Console.WriteLine("Account found!!");
                     Bank.yesBank[i].Balance = Bank.yesBank[i].Balance + amount;
                     Console.WriteLine("Your Current Balance is: " + Bank.yesBank[i].Balance);
-                    // flag = false;
+                   
                     break;
                 }
                 else
                 {
                     Console.WriteLine("Account not found!!");
                 }
-                // return balance;
+                
             }
         }
 

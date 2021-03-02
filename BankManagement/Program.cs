@@ -46,7 +46,7 @@ namespace MidTermLabAssignment1
 
                         //Account acc = new Account();
                         
-                        Console.WriteLine("How many accounts do you want to create? ");
+                        Console.WriteLine("How Many Accounts Do You Want To Create? ");
                         a = Convert.ToInt32(Console.ReadLine());
                        
                         //Bank weBank = new Bank("Tradestone Bank", a);
@@ -71,31 +71,33 @@ namespace MidTermLabAssignment1
                         }
                         break;
                     case 2:
+                        weBank.PrintAllAccounts();
+                        break;
                         
+                    case 3:
                         Console.WriteLine("\nDeposit ammount: ");
                         double dep = Convert.ToInt32(Console.ReadLine());
                         acc.Deposit(dep);
                         break;
-                    case 3:
+                        
+                    case 4:
                         Console.WriteLine("\nWithdraw ammount: ");
                         double withd = Convert.ToInt32(Console.ReadLine());
                         acc.Withdraw(withd);
                         break;
-                    case 4:
-                        Console.WriteLine("\nTransfer ammount: ");
-                         double tran = Convert.ToInt32(Console.ReadLine());
-                        //Console.WriteLine("\nTransfer Account: ");
-                        //int a = Convert.ToInt32(Console.ReadLine());
-                        acc.Transfer(tran);
-                        break;
+
                     case 5:
 
-                        Console.WriteLine("House no: ");
+                        Console.WriteLine("Account No: ");
                         int delAC = Convert.ToInt32(Console.ReadLine());
                         weBank.RemoveAccount(delAC);
                         break;
                     case 6:
-                        weBank.PrintAllAccounts();
+                        Console.WriteLine("\nTransfer ammount: ");
+                        double tran = Convert.ToInt32(Console.ReadLine());
+                        //Console.WriteLine("\nTransfer Account: ");
+                        //int a = Convert.ToInt32(Console.ReadLine());
+                        acc.Transfer(tran);
                         break;
 
                     case 7:
