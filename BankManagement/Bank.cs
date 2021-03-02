@@ -10,49 +10,56 @@ namespace MidTermLabAssignment1
     {
 
         private string bankName;
-        public static Account[] myBank;
+        public static Account[] yesBank;
         public static int size;
 
         public Bank(string bankName, int size)
         {
             Bank.size = size;
             this.bankName = bankName;
-            myBank = new Account[size];
+            yesBank = new Account[size];
         }
 
+        public Bank() { }
+           
 
-
-        //int obj = Account.AccountNumber;
+       
 
         public string BankName
         {
             set { this.bankName = value; }
             get { return this.bankName; }
         }
+
+
         public Account[] Accounts
         {
-            set { Bank.myBank = value; }
-            get { return Bank.myBank; }
+            set { Bank.yesBank = value; }
+            get { return Bank.yesBank; }
         }
+
+
 
         public void PrintAllAccounts()
         {
-            for (int i = 0; i < myBank.Length; i++)
+            for (int i = 0; i < yesBank.Length; i++)
             {
-                if (myBank[i] == null)
+                if (yesBank[i] == null)
                 {
                     continue;
                 }
-                myBank[i].PrintAccount();
+                yesBank[i].PrintAccount();
             }
         }
+
+
         public void AddAccount(Account account)
         {
-            for (int i = 0; i < myBank.Length; i++)
+            for (int i = 0; i < yesBank.Length; i++)
             {
-                if (myBank[i] == null)
+                if (yesBank[i] == null)
                 {
-                    myBank[i] = account;
+                    yesBank[i] = account;
                     break;
                 }
             }
@@ -67,22 +74,22 @@ namespace MidTermLabAssignment1
         public void RemoveAccount(int accountNumber)
         {
             int flag = 0;
-            for (int i = 0; i < myBank.Length; i++)
+            for (int i = 0; i < yesBank.Length; i++)
             {
-                if (myBank[i] == null)
+                if (yesBank[i] == null)
                 {
                     continue;
                 }
-                else if (myBank[i].AccountNumber == accountNumber)
+                else if (yesBank[i].AccountNumber == accountNumber)
                 {
-                    myBank[i].PrintAccount();
+                    yesBank[i].PrintAccount();
                     flag = 0;
 
-                    int length = myBank.Length;
+                    int length = yesBank.Length;
 
                     for (int k = 0; i < (length - i); i++)
                     {
-                        myBank[i] = myBank[i + 1];
+                        yesBank[i] = yesBank[i + 1];
                     }
                     break;
                 }
@@ -98,7 +105,7 @@ namespace MidTermLabAssignment1
 
         
         }
-
+        
 
 
     }

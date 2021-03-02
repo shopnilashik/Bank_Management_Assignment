@@ -55,17 +55,17 @@ namespace MidTermLabAssignment1
             Console.WriteLine("Enter account number: ");
             int accNo = Convert.ToInt32(Console.ReadLine());
 
-            for (int i = 0; i < Bank.myBank.Length; i++)
+            for (int i = 0; i < Bank.yesBank.Length; i++)
             {
-                if (Bank.myBank[i] == null)
+                if (Bank.yesBank[i] == null)
                 {
                     continue;
                 }
-                else if (Bank.myBank[i].accountNumber == accNo)
+                else if (Bank.yesBank[i].accountNumber == accNo)
                 {
                     Console.WriteLine("Account found!!");
-                    Bank.myBank[i].Balance = Bank.myBank[i].Balance - amount;
-                    Console.WriteLine("Your Current Balance is: " + Bank.myBank[i].Balance);
+                    Bank.yesBank[i].Balance = Bank.yesBank[i].Balance - amount;
+                    Console.WriteLine("Your Current Balance is: " + Bank.yesBank[i].Balance);
                     // flag = false;
                     break;
                 }
@@ -78,23 +78,24 @@ namespace MidTermLabAssignment1
 
         }
 
-        public void Transfer(Account receiver, double amount)
+        public void Transfer( double amount)
         {
             Console.WriteLine("Enter account number: ");
             int accNo = Convert.ToInt32(Console.ReadLine());
-            // bool flag = false;
-            for (int i = 0; i < Bank.myBank.Length; i++)
+
+
+
+            for (int i = 0; i < Bank.yesBank.Length; i++)
             {
-                if (Bank.myBank[i] == null)
+                if (Bank.yesBank[i] == null)
                 {
                     continue;
                 }
-                else if (Bank.myBank[i].accountNumber == accNo)
+                else if (Bank.yesBank[i].accountNumber == accNo)
                 {
                     Console.WriteLine("Account found!!");
-                    Bank.myBank[i].Balance = Bank.myBank[i].Balance - amount;
-                    Console.WriteLine("Your Current Balance is: " + Bank.myBank[i].Balance);
-                    // flag = false;
+                    Bank.yesBank[i].Balance = Bank.yesBank[i].Balance - amount;
+                    Console.WriteLine("Your Current Balance is: " + Bank.yesBank[i].Balance);
                     break;
                 }
                 else
@@ -113,17 +114,17 @@ namespace MidTermLabAssignment1
             int accNo = Convert.ToInt32(Console.ReadLine());
 
 
-            for (int i = 0; i < Bank.myBank.Length; i++)
+            for (int i = 0; i < Bank.yesBank.Length; i++)
             {
-                if (Bank.myBank[i] == null)
+                if (Bank.yesBank[i] == null)
                 {
                     continue;
                 }
-                else if (Bank.myBank[i].accountNumber == accNo)
+                else if (Bank.yesBank[i].accountNumber == accNo)
                 {
                     Console.WriteLine("Account found!!");
-                    Bank.myBank[i].Balance = Bank.myBank[i].Balance + amount;
-                    Console.WriteLine("Your Current Balance is: " + Bank.myBank[i].Balance);
+                    Bank.yesBank[i].Balance = Bank.yesBank[i].Balance + amount;
+                    Console.WriteLine("Your Current Balance is: " + Bank.yesBank[i].Balance);
                     // flag = false;
                     break;
                 }

@@ -10,3 +10,15 @@
 /Users/shopnilashik/Projects/BankManagement/BankManagement/obj/Debug/netcoreapp3.1/BankManagement.dll
 /Users/shopnilashik/Projects/BankManagement/BankManagement/obj/Debug/netcoreapp3.1/BankManagement.pdb
 /Users/shopnilashik/Projects/BankManagement/BankManagement/obj/Debug/netcoreapp3.1/BankManagement.genruntimeconfig.cache
+/Users/shopnilashik/Projects/Bank_Management_Assignment/BankManagement/obj/Debug/netcoreapp3.1/BankManagement.csprojAssemblyReference.cache
+/Users/shopnilashik/Projects/Bank_Management_Assignment/BankManagement/obj/Debug/netcoreapp3.1/BankManagement.AssemblyInfoInputs.cache
+/Users/shopnilashik/Projects/Bank_Management_Assignment/BankManagement/obj/Debug/netcoreapp3.1/BankManagement.AssemblyInfo.cs
+/Users/shopnilashik/Projects/Bank_Management_Assignment/BankManagement/obj/Debug/netcoreapp3.1/BankManagement.csproj.CoreCompileInputs.cache
+/Users/shopnilashik/Projects/Bank_Management_Assignment/BankManagement/obj/Debug/netcoreapp3.1/BankManagement.dll
+/Users/shopnilashik/Projects/Bank_Management_Assignment/BankManagement/obj/Debug/netcoreapp3.1/BankManagement.pdb
+/Users/shopnilashik/Projects/Bank_Management_Assignment/BankManagement/bin/Debug/netcoreapp3.1/BankManagement.deps.json
+/Users/shopnilashik/Projects/Bank_Management_Assignment/BankManagement/bin/Debug/netcoreapp3.1/BankManagement.runtimeconfig.json
+/Users/shopnilashik/Projects/Bank_Management_Assignment/BankManagement/bin/Debug/netcoreapp3.1/BankManagement.runtimeconfig.dev.json
+/Users/shopnilashik/Projects/Bank_Management_Assignment/BankManagement/bin/Debug/netcoreapp3.1/BankManagement.dll
+/Users/shopnilashik/Projects/Bank_Management_Assignment/BankManagement/bin/Debug/netcoreapp3.1/BankManagement.pdb
+/Users/shopnilashik/Projects/Bank_Management_Assignment/BankManagement/obj/Debug/netcoreapp3.1/BankManagement.genruntimeconfig.cache
