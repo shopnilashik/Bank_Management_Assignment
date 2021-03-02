@@ -48,32 +48,7 @@ namespace MidTermLabAssignment1
 
 
 
-                Console.WriteLine("Do You want to Transaction..?? ");
-                    Console.WriteLine("1.Withdrow");
-                    Console.WriteLine("2.Deposite");
-                    int la = int.Parse(Console.ReadLine());
-                switch (la)
-                {
-
-                    case 1:
-                        Account dep = new Account();
-                        Console.WriteLine("Enter Your Account Number");
-                        int acce = int.Parse(Console.ReadLine());
-
-                        dep.Deposit(acce);
-                        break;
-                    case 2:
-                        Account wit = new Account();
-                        Console.WriteLine("Enter Your Account Number");
-                        int acca = int.Parse(Console.ReadLine());
-                        wit.Withdraw(acca);
-                        break;
-                }
-                 
-
-
-
-                    //ourBank.PrintAllAccounts();
+               
 
             }
 

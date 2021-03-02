@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/shopnilashik/Projects/BankManagement/BankManagement/BankManagement.csproj",
+      "projectUniqueName": "/Users/shopnilashik/Projects/Bank_Management_Assignment/BankManagement/BankManagement.csproj",
       "projectName": "BankManagement",
-      "projectPath": "/Users/shopnilashik/Projects/BankManagement/BankManagement/BankManagement.csproj",
+      "projectPath": "/Users/shopnilashik/Projects/Bank_Management_Assignment/BankManagement/BankManagement.csproj",
       "packagesPath": "/Users/shopnilashik/.nuget/packages/",
-      "outputPath": "/Users/shopnilashik/Projects/BankManagement/BankManagement/obj/",
+      "outputPath": "/Users/shopnilashik/Projects/Bank_Management_Assignment/BankManagement/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/shopnilashik/.config/NuGet/NuGet.Config"
