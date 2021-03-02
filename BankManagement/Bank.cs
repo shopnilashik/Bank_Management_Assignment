@@ -38,10 +38,21 @@ namespace MidTermLabAssignment1
             get { return Bank.yesBank; }
         }
 
+        public Account[] yesbank
+        {
+            get {
 
+                return yesBank;
+            }
+            set {
+                yesBank = value;
+
+            }
+        }
 
         public void PrintAllAccounts()
         {
+            Console.WriteLine( BankName );
             for (int i = 0; i < yesBank.Length; i++)
             {
                 if (yesBank[i] == null)
@@ -50,23 +61,27 @@ namespace MidTermLabAssignment1
                 }
                 yesBank[i].PrintAccount();
             }
+            
         }
-
 
         public void AddAccount(Account account)
         {
-            for (int i = 0; i < yesBank.Length; i++)
-            {
-                if (yesBank[i] == null)
+            
+                for (int i = 0; i < yesBank.Length; i++)
                 {
+                    if (yesBank[i] == null)
+                    {
 
-                    continue;
-                }
+                        continue;
+                    }
+                
+
+            
                 yesBank[i].PrintAccount();
             }
         }
 
-        public void trans(int typeT, int a)
+        public void trans(int transT, int a)
         {
 
 
@@ -77,37 +92,35 @@ namespace MidTermLabAssignment1
             int flag = 0;
             for (int i = 0; i < yesBank.Length; i++)
             {
-                if (yesBank[i] == null)
+                if (yesBank[i].AccountNumber == accountNumber)
                 {
-                    continue;
+                    
+
+                    yesBank[i] = null;
+                    Console.WriteLine("Account Deleted");
+                    flag = 1;
+                    break;
                 }
-                else if (yesBank[i].AccountNumber == accountNumber)
+                else if (yesBank[i] == null)
                 {
-                    yesBank[i].PrintAccount();
-                    flag = 0;
-
-                    int length = yesBank.Length;
-
-                    for (int k = 0; i < (length - i); i++)
+                    for (int k = 0; k < (yesBank.Length - i); k++)
                     {
                         yesBank[i] = yesBank[i + 1];
                     }
-                    break;
+                    continue;
                 }
                 else
                 {
-                    flag = 1;
+                    flag = 0;
 
                 }
 
             }
-            if (flag == 1)
+            if (flag == 0)
                 Console.WriteLine("Account Not Found");
-
-        
         }
-        
 
+        
 
     }
 }

@@ -20,13 +20,13 @@ namespace MidTermLabAssignment1
             bool flag = true;
 
 
-            Console.WriteLine("How can i help u sir");
+            Console.WriteLine("chose your service between 1 to 7");
 
-            int a;
+            int a=5;
             Account acc = new Account();
             //Console.WriteLine("How many accounts do you want to create? ");
             //a = Convert.ToInt32(Console.ReadLine());
-            Bank weBank = new Bank();
+            Bank weBank = new Bank("BD Bank",a);
 
             while (flag)
             {
@@ -65,6 +65,7 @@ namespace MidTermLabAssignment1
                             string city = Console.ReadLine();
                             Console.WriteLine("Country: ");
                             string country = Console.ReadLine();
+                            
 
                             weBank.AddAccount(new Account(name, ammount, AccountNumberGen(i), new Address(houseNo, roadNo, city, country)));
 

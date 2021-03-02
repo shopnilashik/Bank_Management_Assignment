@@ -13,8 +13,7 @@ namespace MidTermLabAssignment1
         private int accountNumber;
         private string accountName;
         private double balance;
-        private Address address;//1-1 Relation
-                                //private double amount;
+        private Address address;
 
         public Account(string accountName, double balance, int acn, Address address)
         {
@@ -48,6 +47,12 @@ namespace MidTermLabAssignment1
         {
             get { return this.address; }
             set { this.address = value; }
+        }
+        public void PrintAccount()
+        {
+
+            Console.WriteLine("Account No:{0}\nAccount Name:{1}\nBalance:{2}", this.accountNumber, this.accountName, this.balance);
+            this.address.PrintAddress();
         }
 
         public void Withdraw(double amount)
@@ -110,7 +115,7 @@ namespace MidTermLabAssignment1
         public void Deposit(double amount)
         {
 
-            Console.WriteLine("Enter account number: ");
+            Console.WriteLine("Enter Account Number: ");
             int accNo = Convert.ToInt32(Console.ReadLine());
 
 
@@ -136,12 +141,7 @@ namespace MidTermLabAssignment1
             }
         }
 
-        public void PrintAccount()
-        {
-            //Console.WriteLine("Account No:"+this.accountNumber+"\nAccount Name:"+this.accountName+"\nBalance:"+this.balance);
-            Console.WriteLine("Account No:{0}\nAccount Name:{1}\nBalance:{2}", this.accountNumber, this.accountName, this.balance);
-            this.address.PrintAddress();
-        }
+        
 
 
 
