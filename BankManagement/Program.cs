@@ -14,14 +14,14 @@ namespace MidTermLabAssignment1
         {
             while (true)
             {
-                Console.WriteLine("\n\n");
+                
                 Console.WriteLine("_______Welcome_____");
-                Console.WriteLine("");
-                Console.WriteLine("");
-                Console.WriteLine("Enter your choice between (1-7):");
-                Console.WriteLine("1.Open an Account :type 'open'");
-                Console.WriteLine("2.Perform transaction on account:type 'account'");
-                Console.WriteLine("3.Exit the application: type 'quit'");
+                Console.WriteLine("\n\n\n");
+                
+                Console.WriteLine("Enter your choice between (1-3):");
+                Console.WriteLine("1.Open an Account :    type 'open'");
+                Console.WriteLine("2.Perform transaction on account:   type 'account'");
+                Console.WriteLine("3.Exit the application:   type 'quit'");
                 
                 string input = Convert.ToString(Console.ReadLine());
 
@@ -36,7 +36,7 @@ namespace MidTermLabAssignment1
                         
                             break;
                     case "account":
-                        Environment.Exit(0);
+                        bn.account();
                         break;
                     case "quit":
                         Environment.Exit(0);

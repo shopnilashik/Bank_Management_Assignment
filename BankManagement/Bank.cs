@@ -9,17 +9,29 @@ namespace MidTermLabAssignment1
 {
     class Bank
     {
-        public string name,username,d,m,y,address;
+        public string name, username, d, m, y, address;
         public int balance = 0;
         internal int depo;
         public int wit;
         public string actyp;
-        Id idg = new Id();
+        public string idgenerator(int inc)
+        {
+            string start = "0000";
+            string id = "21" + (start + inc);
+            return id;
+        }
+
+        public int num;
+
 
 
         protected char type;
+        
+        
         public void create_account()
         {
+            Console.WriteLine("How many account do you want to open..??");
+            num = Convert.ToInt32(Console.ReadLine());
             
             Console.WriteLine("1. Open a Savings Account : type 'savings'");
             Console.WriteLine("2. Open an Checking Account :type 'checking'");
@@ -36,7 +48,7 @@ namespace MidTermLabAssignment1
 
             }
 
-            Console.WriteLine("\n Enter you name; ");
+            Console.WriteLine("\n Enter you Name; ");
             name = Console.ReadLine();
 
             Console.WriteLine("Enter your Username:");
@@ -81,15 +93,12 @@ namespace MidTermLabAssignment1
         public void show() 
         {
             Console.WriteLine("\n\n\n\n\n\n_________Details_______");
-            Console.WriteLine("Your Account Number : {0}",idg.generate());
+            Console.WriteLine("Your Account Number : {0}",idgenerator(num));
             Console.WriteLine("Your Name  :{0}",name);
             Console.WriteLine("Username   :{0}", username);
             Console.WriteLine("Your Birthdate   :{0}-{1}-{2}",d,m,y);
-           
             Console.WriteLine("Yout address  :{0}", address);
-
             Console.WriteLine("Your account type: {0}", actyp);
-         
             Console.WriteLine("Your Balance: {0}", balance);
 
 
@@ -105,11 +114,11 @@ namespace MidTermLabAssignment1
         public void account()
         {
             string com;
-            Console.WriteLine("\n\n\nMake a deposit");
-            Console.WriteLine("Make a withdrow");
-            Console.WriteLine("Make a transaction");
-            Console.WriteLine("Show the number of transaction and balance");
-            Console.WriteLine("Exit the application");
+            Console.WriteLine("\n\n\nMake a deposit :   type 'deposit'");
+            Console.WriteLine("Make a withdrow :   type 'withdrow'");
+            Console.WriteLine("Make a transaction :    type 'transfer'");
+            Console.WriteLine("Show the number of transaction and balance : type 'show'");
+            Console.WriteLine("Exit the application : type 'quit'");
             com = Console.ReadLine();
             switch (com)
             {
@@ -163,7 +172,7 @@ namespace MidTermLabAssignment1
                     wit = Convert.ToInt32(Console.ReadLine());
                     if (balance == 0)
                     {
-                        Console.WriteLine("Your balance cnt't be zero");
+                        Console.WriteLine("Your balance cnt't be zero.try again");
                     }
                     else
                     {
