@@ -3,124 +3,41 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BankManagement;
 
 namespace MidTermLabAssignment1
 {
     class Bank
     {
-
-        private string bankName;
-        public static Account[] yesBank;
-        public static int size;
-
-        public Bank(string bankName, int size)
+        public string name;
+        internal int deposit;
+        protected char type;
+        private void create_account()
         {
-            Bank.size = size;
-            this.bankName = bankName;
-            yesBank = new Account[size];
-        }
-
-        public Bank() { }
-           
-
-       
-
-        public string BankName
-        {
-            set { this.bankName = value; }
-            get { return this.bankName; }
-        }
+            Console.WriteLine("\n Enter you name; ");
+            name = Console.ReadLine();
+            Console.WriteLine("name{0}",name);
 
 
-        public Account[] Accounts
-        {
-            set { Bank.yesBank = value; }
-            get { return Bank.yesBank; }
-        }
 
-        public Account[] yesbank
-        {
-            get {
-
-                return yesBank;
-            }
-            set {
-                yesBank = value;
-
-            }
-        }
-
-        public void PrintAllAccounts()
-        {
-            Console.WriteLine( BankName );
-            for (int i = 0; i < yesBank.Length; i++)
-            {
-                if (yesBank[i] == null)
-                {
-                    continue;
-                }
-                yesBank[i].PrintAccount();
-            }
-            
-        }
-
-        public void AddAccount(Account account)
-        {
-            
-                for (int i = 0; i < yesBank.Length; i++)
-                {
-                    if (yesBank[i] == null)
-                    {
-
-                        continue;
-                    }
-                
 
             
-                yesBank[i].PrintAccount();
-            }
-        }
-
-        public void trans(int transT, int a)
-        {
-
 
         }
 
-        public void RemoveAccount(int accountNumber)
-        {
-            int flag = 0;
-            for (int i = 0; i < yesBank.Length; i++)
-            {
-                if (yesBank[i].AccountNumber == accountNumber)
-                {
-                    
-
-                    yesBank[i] = null;
-                    Console.WriteLine("Account Deleted");
-                    flag = 1;
-                    break;
-                }
-                else if (yesBank[i] == null)
-                {
-                    for (int k = 0; k < (yesBank.Length - i); k++)
-                    {
-                        yesBank[i] = yesBank[i + 1];
-                    }
-                    continue;
-                }
-                else
-                {
-                    flag = 0;
-
-                }
-
-            }
-            if (flag == 0)
-                Console.WriteLine("Account Not Found");
+        public void createAccount()
+        {   
+            create_account();
+            Bank bn = new Bank();
+            Console.WriteLine("name{0}   :", bn.name);
         }
 
-        
+        //public void show()
+        //{
+        //    Console.WriteLine("name{0}   :", name);
 
+        //}
     }
 }
+
+        
