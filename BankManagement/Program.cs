@@ -16,58 +16,42 @@ namespace MidTermLabAssignment1
             {
                 Console.WriteLine("\n\n");
                 Console.WriteLine("_______Welcome_____");
-                Console.WriteLine("Enter your choice between 1-7:");
-                Console.WriteLine("\n1.Create Account");
-                Console.WriteLine("2.Transfer Money");
-                Console.WriteLine("3.Withdrow Money");
-                Console.WriteLine("4.Deposit Money");
-                Console.WriteLine("5.Change User Name");
-                Console.WriteLine("6. Account Details");
-                Console.WriteLine("7.Exit");
-                int input = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("");
+                Console.WriteLine("");
+                Console.WriteLine("Enter your choice between (1-7):");
+                Console.WriteLine("1.Open an Account :type 'open'");
+                Console.WriteLine("2.Perform transaction on account:type 'account'");
+                Console.WriteLine("3.Exit the application: type 'quit'");
+                
+                string input = Convert.ToString(Console.ReadLine());
 
                 Bank bn = new Bank();
-                Account ac = new Account();
+               
+                
                 switch (input)
                 {
-                    case 1:
-                        bn.createAccount();
-                        ac.show();
+                    case "open":
+                        bn.create_account();
+                        bn.show();
+                        
                             break;
-                    case 2:
+                    case "account":
+                        Environment.Exit(0);
+                        break;
+                    case "quit":
                         Environment.Exit(0);
                         break;
 
-                    case 6:
-                        ac.show();
-                        break;
-
-                   defaul:
-                        Console.WriteLine();
-
-
 
                 }
-                
-                
-                
+         
 
             }
-            
-            
-            
-
 
 
         }
 
-
-
-
-
     }
-
-
-      
+    
 }
 
